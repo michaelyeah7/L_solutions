@@ -1,5 +1,4 @@
-import java.util.Scanner;
-class Solution {
+class P3_LongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         StringBuilder LongestSubString= new StringBuilder("");
         StringBuilder LongestSubString_temp = new StringBuilder("");
@@ -25,8 +24,7 @@ class Solution {
 
     
     public static void main(String[] args) {
-    	Scanner cin = new Scanner(System.in);
-    	Solution solution = new Solution();
+    	P3_LongestSubstring solution = new P3_LongestSubstring();
     	System.out.println(solution.lengthOfLongestSubstring("ggububgvfk"));
     	}
     
