@@ -11,16 +11,17 @@ public class P4_MedianofTwoSortedArrays {
 		ArrayList A = new ArrayList();
 		double Median;
 		while (Aindex < stopIndex) {
-			if (!(nums1Index < nums1.length ))
-				{A.add(Aindex, nums2[nums2Index]);
-			nums2Index++;}
-			else if (!(nums2Index < nums2.length))
-				{A.add(Aindex, nums1[nums1Index]);			
-			nums1Index++;}
-			
+			if (!(nums1Index < nums1.length)) {
+				A.add(Aindex, nums2[nums2Index]);
+				nums2Index++;
+			} else if (!(nums2Index < nums2.length)) {
+				A.add(Aindex, nums1[nums1Index]);
+				nums1Index++;
+			}
+
 			else if (nums1[nums1Index] < nums2[nums2Index]) {
 				A.add(Aindex, nums1[nums1Index]);
-					nums1Index++;
+				nums1Index++;
 			} else {
 				A.add(Aindex, nums2[nums2Index]);
 				nums2Index++;
@@ -31,7 +32,7 @@ public class P4_MedianofTwoSortedArrays {
 		Integer[] array = new Integer[A.size()];
 		A.toArray(array);
 		if ((nums1.length + nums2.length + 1) % 2 == 1)
-		Median = (array[stopIndex - 2] + array[stopIndex - 1]) / 2.0;
+			Median = (array[stopIndex - 2] + array[stopIndex - 1]) / 2.0;
 		else
 			Median = array[stopIndex - 1];
 
@@ -39,8 +40,8 @@ public class P4_MedianofTwoSortedArrays {
 	}
 
 	public static void main(String[] args) {
-		int nums1[] = { 1, 3 };
-		int nums2[] = { 2};
+		int nums1[] = { 1, 2 };
+		int nums2[] = { 3, 4 };
 		P4_MedianofTwoSortedArrays solution = new P4_MedianofTwoSortedArrays();
 		System.out.println(solution.findMedianSortedArrays(nums1, nums2));
 	}
